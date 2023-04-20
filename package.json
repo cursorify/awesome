@@ -1,0 +1,27 @@
+{
+  "name": "@cursorify/cursors",
+  "version": "0.0.1",
+  "homepage": "https://cursorify.github.io/cursors",
+  "description": "Cursorify cursor components",
+  "author": "Lee Sang Min",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cursorify/cursors"
+  },
+  "keywords": [
+    "custom-cursor",
+    "react-component"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@cursorify/react": "^0.0.2",
+    "@types/react": "^17.0.2",
+    "react": "^17.0.2",
+    "typescript": "^5.0.2"
+  }
+}
