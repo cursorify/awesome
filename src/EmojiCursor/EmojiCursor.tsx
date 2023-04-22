@@ -2,11 +2,11 @@ import { CursorProps, useCursorify } from '@cursorify/react'
 import React from 'react'
 
 export const EmojiCursor: React.FC<CursorProps> = ({ disabled }) => {
-  const { mouseState, hoverState } = useCursorify()
+  const { mouseState, style } = useCursorify()
 
   return (
     <div
-      data-hover={hoverState}
+      data-hover={style}
       style={{
         width: 40,
         height: 40,
@@ -16,7 +16,7 @@ export const EmojiCursor: React.FC<CursorProps> = ({ disabled }) => {
       {(() => {
         if (disabled) return '🖐️'
         if (mouseState === 'mouseDown') return '✊'
-        if (hoverState === 'pointer') return '👆'
+        if (style === 'pointer') return '👆'
         return '🖐️'
       })()}
     </div>

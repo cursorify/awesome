@@ -5,9 +5,9 @@ import Pointer from './svgs/Pointer'
 import Text from './svgs/Text'
 
 export const PhingerCursor: React.FC<CursorProps> = ({ disabled }) => {
-  const { hoverState } = useCursorify()
+  const { style } = useCursorify()
 
-  const margin = disabled ? 24 : hoverState === 'default' ? 24 : 12
+  const margin = disabled ? 24 : style === 'default' ? 24 : 12
   return (
     <div
       style={{
@@ -19,8 +19,8 @@ export const PhingerCursor: React.FC<CursorProps> = ({ disabled }) => {
     >
       {(() => {
         if (disabled) return <Default />
-        if (hoverState === 'pointer') return <Pointer />
-        if (hoverState === 'text') return <Text />
+        if (style === 'pointer') return <Pointer />
+        if (style === 'text') return <Text />
         return <Default />
       })()}
     </div>
